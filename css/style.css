@@ -1,0 +1,187 @@
+/* Japan Salon Finder - Custom Styles */
+/* Tailwind handles most styling; this file covers gaps */
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Filter chip buttons */
+.chip {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-size: 14px;
+  min-height: 44px;
+  min-width: 44px;
+  line-height: 1.4;
+  transition: all 0.15s ease;
+  text-align: center;
+  user-select: none;
+}
+
+.chip:hover {
+  border-color: #6366f1;
+  background: #eef2ff;
+}
+
+.chip.active {
+  background: #6366f1;
+  color: #fff;
+  border-color: #6366f1;
+}
+
+/* Salon card */
+.salon-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  transition: box-shadow 0.2s ease;
+}
+
+.salon-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* English level badges */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.badge-fluent { background: #dcfce7; color: #166534; }
+.badge-conversational { background: #dbeafe; color: #1e40af; }
+.badge-basic { background: #fef3c7; color: #92400e; }
+.badge-staff { background: #f3e8ff; color: #6b21a8; }
+
+/* Price badge */
+.price-badge {
+  font-weight: 700;
+  color: #374151;
+}
+
+/* Link buttons in cards */
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  min-height: 44px;
+  transition: background 0.15s;
+}
+
+.card-link-hotpepper {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.card-link-hotpepper:hover { background: #fecaca; }
+
+.card-link-maps {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.card-link-maps:hover { background: #bfdbfe; }
+
+.card-link-website {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.card-link-website:hover { background: #e5e7eb; }
+
+/* Source tag */
+.source-tag {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 8px;
+}
+
+/* Results grid */
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* Filter section */
+.filter-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.filter-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 15px;
+  min-height: 44px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+/* Result count */
+.result-count {
+  font-size: 14px;
+  color: #6b7280;
+  padding: 8px 0;
+}
+
+/* No results */
+.no-results {
+  text-align: center;
+  padding: 48px 16px;
+  color: #9ca3af;
+}
+
+/* Chip container wrapping */
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* 480px mobile breakpoint */
+@media (max-width: 480px) {
+  .salon-card { padding: 16px; }
+  .card-link { padding: 10px 12px; font-size: 12px; }
+  .chip { padding: 8px 12px; font-size: 13px; }
+}
+
+/* Tablet+ */
+@media (min-width: 768px) {
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
